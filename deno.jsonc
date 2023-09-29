@@ -1,0 +1,32 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "test": {
+    "include": ["test/"]
+  },
+  "compilerOptions": {
+    "allowJs": false,
+    "strict": true,
+    "noImplicitAny": true
+  },
+  "lock": false,
+  "nodeModulesDir": false,
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 120,
+    "indentWidth": 4,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": ["src/", "test/"],
+    "exclude": []
+  },
+  "lint": {
+    "include": ["src/", "test/"],
+    "rules": {
+      "tags": ["recommended"],
+      "exclude": ["no-unused-vars", "no-this-alias"]
+    }
+  }
+}

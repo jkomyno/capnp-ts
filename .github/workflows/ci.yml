@@ -1,0 +1,20 @@
+name: ci
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: download deno
+        uses: denoland/setup-deno@main
+        with:
+          deno-version: 1.35.0
+      - name: check format
+        run: deno fmt --check
+      - name: lint
+        run: deno lint
+      - name: run tests
+        run: |
+          deno test --allow-env --allow-read
+          deno install -f --allow-env --allow-read --allow-write -n capnpc-ts ./src/capnpc/mod.ts

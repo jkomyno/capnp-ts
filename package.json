@@ -1,0 +1,40 @@
+{
+  "name": "@jkomyno/capnp-ts",
+  "version": "1.0.0-alpha.3",
+  "main": "./esm/capnp/mod.js",
+  "type": "module",
+  "description": "Strongly-typed Cap'n Proto implementation for JS runtimes",
+  "keywords": [
+    "binary",
+    "binary protocol",
+    "data structures",
+    "list"
+  ],
+  "author": "Alberto Schiabel (jkomyno)",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.3.4"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.8",
+    "typescript": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkomyno/capnp-ts.git"
+  },
+  "homepage": "https://github.com/jkomyno/capnp-ts#readme",
+  "bugs": {
+    "url": "https://github.com/jkomyno/capnp-ts/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./esm/capnp/mod.d.ts",
+      "import": "./esm/capnp/mod.js"
+    },
+    "./*": {
+      "types": "./esm/capnp/*.d.ts",
+      "import": "./esm/capnp/*.js"
+    }
+  }
+}
